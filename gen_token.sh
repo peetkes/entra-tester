@@ -6,16 +6,11 @@ else
  . $1
 fi
 
-#. ./oidc.env
-
 discovery="https://login.microsoftonline.com/$tenant_id/v2.0/.well-known/openid-configuration"
 #scope="openid+email+profile+api://2fab98bf-8c75-4ca2-8692-d2fefdf5ff95/Read"
 #scope="openid+email+profile"
 scope="openid+email+profile"
 
-#prompt='&prompt=select_account'
-#prompt='&prompt=login'
-#prompt='&prompt=consent'
 redirect_uri=http://localhost:12345/oauth/complete
 state="`head -c 6 /dev/urandom | base64 | sed -e s/=//g -e 'y%+/%-_%'`"
 pkceVerifier="`head -c 32 /dev/urandom | base64 | sed -e s/=//g -e 'y%+/%-_%'`"
