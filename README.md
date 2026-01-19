@@ -27,6 +27,7 @@ Create a file named [your oidc].env with the following entries:
 tenant_id=[your tenant_id here]
 client_id=[your client_id here]
 client_secret=[your client secret here ]
+scope=[your complete scope here: most likely openid+email+profile]
 ```
 
 Run the script:
